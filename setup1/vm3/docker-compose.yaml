@@ -4,27 +4,7 @@ networks:
   test:
 
 services:
-  # ca-org3:
-  #   image: hyperledger/fabric-ca
-  #   environment:
-  #     - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
-  #     - FABRIC_CA_SERVER_CA_NAME=ca.org3.example.com
-  #     - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.org3.example.com-cert.pem
-  #     - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/priv_sk
-  #     - FABRIC_CA_SERVER_TLS_ENABLED=true
-  #     - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-tls/tlsca.org3.example.com-cert.pem
-  #     - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-tls/priv_sk
-  #   ports:
-  #     - "9054:7054"
-  #   command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
-  #   volumes:
-  #     - ../../artifacts/channel/crypto-config/peerOrganizations/org3.example.com/ca/:/etc/hyperledger/fabric-ca-server-config
-  #     - ../../artifacts/channel/crypto-config/peerOrganizations/org3.example.com/tlsca/:/etc/hyperledger/fabric-ca-server-tls
-  #   container_name: ca.org3.example.com
-  #   hostname: ca.org3.example.com
-  #   networks:
-  #     - test
-
+ 
   couchdb4:
     container_name: couchdb4
     image: hyperledger/fabric-couchdb
@@ -36,16 +16,6 @@ services:
     networks:
       - test
 
-  couchdb5:
-    container_name: couchdb5
-    image: hyperledger/fabric-couchdb
-    environment:
-      - COUCHDB_USER=
-      - COUCHDB_PASSWORD=
-    ports:
-      - 10984:5984
-    networks:
-      - test
 
   peer0.org3.example.com:
     container_name: peer0.org3.example.com
@@ -93,7 +63,6 @@ services:
     networks:
       - test
 
-  peer1.org3.example.com:
     container_name: peer1.org3.example.com
     extends:
       file: base.yaml
