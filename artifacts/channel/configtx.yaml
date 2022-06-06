@@ -3,7 +3,7 @@ Organizations:
     - &OrdererOrg
         Name: OrdererOrg
         ID: OrdererMSP
-        MSPDir: ../../setup1/vm4/crypto-config/ordererOrganizations/example.com/msp
+        MSPDir: ../../setup1/ordererorg/crypto-config/ordererOrganizations/example.com/msp
 
         Policies:
             Readers:
@@ -20,7 +20,7 @@ Organizations:
         Name: Org1MSP
         ID: Org1MSP
 
-        MSPDir: ../../setup1/vm1/crypto-config/peerOrganizations/org1.example.com/msp
+        MSPDir: ../../setup1/org1/crypto-config/peerOrganizations/org1.example.com/msp
 
         Policies:
             Readers:
@@ -45,7 +45,7 @@ Organizations:
 
         ID: Org2MSP
 
-        MSPDir: ../../setup1/vm2/crypto-config/peerOrganizations/org2.example.com/msp
+        MSPDir: ../../setup1/org2/crypto-config/peerOrganizations/org2.example.com/msp
 
         Policies:
             Readers:
@@ -70,7 +70,7 @@ Organizations:
 
         ID: Org3MSP
 
-        MSPDir: ../../setup1/vm3/crypto-config/peerOrganizations/org3.example.com/msp
+        MSPDir: ../../setup1/org3/crypto-config/peerOrganizations/org3.example.com/msp
 
         Policies:
             Readers:
@@ -132,8 +132,8 @@ Orderer: &OrdererDefaults
         Consenters:
         - Host: orderer.example.com
           Port: 7050
-          ClientTLSCert: ../../setup1/vm4/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
-          ServerTLSCert: ../../setup1/vm4/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
+          ClientTLSCert: ../../setup1/ordererorg/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
+          ServerTLSCert: ../../setup1/ordererorg/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
     Addresses:
         - orderer.example.com:7050
 
@@ -198,16 +198,16 @@ Profiles:
                 Consenters:
                 - Host: orderer.example.com
                   Port: 7050
-                  ClientTLSCert: ../../setup1/vm4/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
-                  ServerTLSCert: ../../setup1/vm4/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
+                  ClientTLSCert: ../../setup1/ordererorg/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
+                  ServerTLSCert: ../../setup1/ordererorg/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
                 - Host: orderer2.example.com
                   Port: 8050
-                  ClientTLSCert: ../../setup1/vm4/crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/tls/server.crt
-                  ServerTLSCert: ../../setup1/vm4/crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/tls/server.crt
+                  ClientTLSCert: ../../setup1/ordererorg/crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/tls/server.crt
+                  ServerTLSCert: ../../setup1/ordererorg/crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/tls/server.crt
                 - Host: orderer3.example.com
                   Port: 9050
-                  ClientTLSCert: ../../setup1/vm4/crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/tls/server.crt
-                  ServerTLSCert: ../../setup1/vm4/crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/tls/server.crt
+                  ClientTLSCert: ../../setup1/ordererorg/crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/tls/server.crt
+                  ServerTLSCert: ../../setup1/ordererorg/crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/tls/server.crt
             Addresses:
                 - orderer.example.com:7050
                 - orderer2.example.com:8050

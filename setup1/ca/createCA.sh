@@ -1,5 +1,11 @@
 echo "================================================================================================="
 
+echo "stop docker"
+docker stop $(docker ps -aq)
+
+echo "remove docker"
+docker rm $(docker ps -aq)
+
 echo "change directory to orderer ca folder"
 cd ../ordererorg/create-certificate-with-ca
 
