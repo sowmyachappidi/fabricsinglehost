@@ -81,7 +81,7 @@ docker-compose up -d
 echo "================================================================================================="
 
 echo "changing the directory to org1"
-cd ../setup1/org1/
+cd ../org1/
 
 echo "truning on org1"
 docker-compose up -d
@@ -90,7 +90,7 @@ docker-compose up -d
 echo "================================================================================================="
 
 echo "changing the directory to org2"
-cd ../setup1/org2/
+cd ../org2/
 
 echo "truning on org2"
 docker-compose up -d
@@ -99,7 +99,7 @@ docker-compose up -d
 echo "================================================================================================="
 
 echo "changing the directory to org3"
-cd ../setup1/org3/
+cd ../org3/
 
 echo "truning on org3"
 docker-compose up -d
