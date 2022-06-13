@@ -13,23 +13,22 @@ setGlobalsForPeer0Org3() {
 
 }
 
-setGlobalsForPeer1Org3() {
-    export CORE_PEER_LOCALMSPID="Org3MSP"
-    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG3_CA
-    export CORE_PEER_MSPCONFIGPATH=${PWD}/crypto-config/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp
-    export CORE_PEER_ADDRESS=localhost:12051
+#setGlobalsForPeer1Org3() {
+#    export CORE_PEER_LOCALMSPID="Org3MSP"
+#    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG3_CA
+#    export CORE_PEER_MSPCONFIGPATH=${PWD}/crypto-config/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp
+#    export CORE_PEER_ADDRESS=localhost:12051
 
-}
+#}
 
 
 joinChannel() {
     setGlobalsForPeer0Org3
     peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
 
-    setGlobalsForPeer1Org3
-    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
+ #   setGlobalsForPeer1Org3
+  #  peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block
 
 }
 
 joinChannel
-
